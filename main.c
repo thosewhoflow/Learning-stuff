@@ -7,6 +7,7 @@
 
 #include <stdint.h>
 #include "my_malloc/my_malloc.h"
+#include "my_free/my_free.h"
 
 // test
 int main(void)
@@ -60,6 +61,7 @@ int main(void)
             p[0],
             p
         );
+        my_free(ptrs[i]);
     }
 
     printf("--- done ---\n");
